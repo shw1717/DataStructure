@@ -1,4 +1,4 @@
-# List
+# DataStructure - List
 
 Python을 이용하여 List ADT를 구현한 프로젝트입니다.
 
