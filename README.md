@@ -1,4 +1,4 @@
-# list.py
+# List
 
 Python을 이용하여 List ADT를 구현한 프로젝트입니다.
 
@@ -96,12 +96,102 @@ LinkedList
 python list.py
 ```
 
----
+# DataStructure - Line Editor
 
-## 개발 환경
+Python과 Flet GUI 라이브러리를 이용하여 구현한 라인 편집기(Line Editor) 프로젝트입니다.
 
-* Language : Python 3
-* IDE : Visual Studio Code
-* Version Control : Git & GitHub
+ArrayList 자료구조를 기반으로 문서의 각 줄(Line)을 관리하며, GUI 환경에서 삽입, 삭제, 수정, 저장 등의 기능을 제공합니다.
 
 ---
+
+## 프로젝트 개요
+
+이 프로젝트는 자료구조의 List ADT를 실제 프로그램 형태로 활용하기 위해 제작되었습니다.
+
+문서의 각 줄을 리스트 형태로 저장하고 관리하며, 사용자는 GUI 버튼을 통해 문서 내용을 편집할 수 있습니다.
+
+
+## 주요 기능
+
+### 문서 편집 기능
+
+| 기능           | 설명                  |
+| ------------ | ------------------- |
+| 삽입 (Insert)  | 원하는 위치에 새로운 라인 추가   |
+| 삭제 (Delete)  | 특정 라인 삭제            |
+| 변경 (Replace) | 특정 라인 내용 수정         |
+| 출력 (Print)   | 현재 문서 내용 출력         |
+| 저장 (Save)    | 문서를 test.txt 파일로 저장 |
+| 불러오기 (Load)  | test.txt 파일 내용 불러오기 |
+| 종료 (Quit)    | 프로그램 종료             |
+
+---
+
+## 자료구조 구현
+
+프로그램 내부에서는 ArrayList 클래스를 이용하여 문서 내용을 저장합니다.
+
+```text id="brvq0z"
+문서
+ ├─ 1번째 줄
+ ├─ 2번째 줄
+ ├─ 3번째 줄
+ └─ ...
+```
+
+각 줄(Line)은 리스트의 원소(Element)로 관리됩니다.
+
+---
+
+## GUI 구성
+
+프로그램은 Flet GUI를 이용하여 다음 요소들로 구성됩니다.
+
+* 행 번호 입력 필드
+* 내용 입력 필드
+* 기능 버튼
+* 현재 문서 출력 영역
+* 상태 메시지 출력
+
+---
+
+## 실행 방법
+
+### 1. Flet 설치
+
+```bash id="jlwmjg"
+pip install flet
+```
+
+---
+
+### 2. 프로그램 실행
+
+```bash id="3dhl92"
+python line_editor.py
+```
+
+또는
+
+```bash id="ymxev8"
+python3 line_editor.py
+```
+
+---
+
+## 파일 저장 방식
+
+프로그램은 `test.txt` 파일을 이용하여 문서를 저장하고 불러옵니다.
+
+* 저장 시: 현재 문서를 test.txt에 기록
+* 불러오기 시: test.txt 내용을 리스트에 로드
+
+---
+
+## 실행 화면 예시
+
+* 라인 삽입
+* 라인 삭제
+* 문서 출력
+* 파일 저장 및 불러오기
+* GUI 기반 문서 편집 기능 제공
