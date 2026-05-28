@@ -88,14 +88,6 @@ LinkedList
 
 ---
 
-## 실행 방법
-
-터미널에서 아래 명령어를 입력합니다.
-
-```bash
-python list.py
-```
-
 # DataStructure - Line Editor
 
 Python과 Flet GUI 라이브러리를 이용하여 구현한 라인 편집기(Line Editor) 프로젝트입니다.
@@ -164,18 +156,6 @@ pip install flet
 ```
 
 ---
-
-### 2. 프로그램 실행
-
-```bash id="3dhl92"
-python line_editor.py
-```
-
-또는
-
-```bash id="ymxev8"
-python3 line_editor.py
-```
 
 ---
 
@@ -307,14 +287,6 @@ A에는 존재하지만 B에는 존재하지 않는 원소를 저장합니다.
 
 ---
 
-## 실행 방법
-
-터미널에서 아래 명령어를 입력합니다.
-
-```bash id="fslnkp"
-python set.py
-```
-
 ## 예제 출력
 
 ```text id="4kk2fr"
@@ -339,3 +311,140 @@ A-B: [1, 2]
 * 자료구조의 추상 자료형(ADT) 개념 이해
 
 ---
+
+# DataStructure - Stack ADT
+
+Python을 이용하여 Stack ADT(Abstract Data Type)를 구현한 프로젝트입니다.
+
+스택(Stack)의 기본 특징인 LIFO(Last In First Out) 구조를 직접 구현하여 자료구조의 동작 원리를 학습하는 것을 목표로 합니다.
+
+---
+
+## 프로젝트 개요
+
+스택(Stack)은 가장 마지막에 들어간 데이터가 가장 먼저 나오는 선형 자료구조입니다.
+
+본 프로젝트에서는 Python 리스트를 기반으로 Stack ADT를 직접 구현하였으며, 스택의 기본 연산들을 클래스 형태로 구현하였습니다.
+
+---
+
+## Stack 특징
+
+* 후입선출(LIFO : Last In First Out) 구조
+* 데이터 삽입과 삭제는 top에서만 수행
+* 가장 최근에 삽입된 데이터가 가장 먼저 제거됨
+
+---
+
+## 구현 기능
+
+| 함수        | 설명              |
+| --------- | --------------- |
+| isEmpty() | 스택이 비어있는지 확인    |
+| isFull()  | 스택이 가득 찼는지 확인   |
+| size()    | 스택 원소 개수 반환     |
+| push(e)   | top에 데이터 삽입     |
+| pop()     | top 데이터 제거 및 반환 |
+| peek()    | top 데이터 확인      |
+| clear()   | 스택 초기화          |
+| display() | 스택 출력           |
+
+---
+
+## 클래스 구조
+
+```text id="6q6c3j"
+Stack
+ ├─ push()
+ ├─ pop()
+ ├─ peek()
+ ├─ size()
+ ├─ clear()
+ └─ display()
+```
+
+---
+
+## 주요 연산 설명
+
+### 1. Push
+
+```text id="bxm3ma"
+push(A)
+push(B)
+push(C)
+```
+
+새로운 데이터를 스택의 top 위치에 삽입합니다.
+
+---
+
+### 2. Pop
+
+```text id="42x0o7"
+pop()
+```
+
+스택의 top 데이터를 제거하고 반환합니다.
+
+가장 마지막에 삽입된 데이터가 먼저 제거됩니다.
+
+---
+
+### 3. Peek
+
+```text id="v1u9gd"
+peek()
+```
+
+top 데이터를 제거하지 않고 확인만 수행합니다.
+
+---
+
+## 실행 예제
+
+프로그램에서는 다음 기능들을 테스트합니다.
+
+* push 연산
+* peek 연산
+* pop 연산
+* 스택 상태 확인
+* underflow 확인
+* clear 연산
+
+---
+
+## 예제 출력
+
+```text id="e0bg5h"
+[Stack] ['A', 'B', 'C', 'D', 'E'] ← top
+
+peek = E
+
+꺼낸 값: E
+꺼낸 값: D
+
+[Stack] ['A', 'B', 'C'] ← top
+```
+
+---
+
+## Underflow 처리
+
+빈 스택에서 pop()을 수행하면 underflow 오류 메시지를 출력하도록 구현하였습니다.
+
+```text id="ehqjaf"
+[오류] 스택이 비어 있습니다. (underflow)
+```
+
+---
+
+## 프로젝트 목적
+
+이 프로젝트를 통해 다음 내용을 학습할 수 있습니다.
+
+* Stack ADT의 구조와 특징
+* LIFO 구조의 동작 원리
+* 스택 기반 자료구조 구현
+* Python 클래스 기반 자료구조 구현
+* underflow 예외 상황 처리
